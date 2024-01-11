@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <title>Landing Page de Destinos de Playa paradisiacas</title>
+  <style>
+    body {
+      background-color: #e0c896; /* Fondo color de arena */
+      color: #333; /* Texto oscuro sobre fondo claro */
+    }
+
+    .navbar {
+      background-color: #ebf7f5fc; /* Barra de navegación en turquesa claro */
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card {
+      background-color: #a5d6a7; /* Fondo de las tarjetas en verde */
+    }
+  </style>
+</head>
+<body>
+
+ <!-- barra de navegacion, debe ser expandida en dispositivos grandes -->
+ <!-- navbar-light :barra se muestra con texto oscuro sobre fondo claro -->
+
+ <nav class="navbar navbar-expand-lg navbar-light ">
+     <div class="container">
+        <!-- Logo barra de navegacion-->
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.PNG" alt="Logo de la playa">
+            Destinos de Playa
+        </a>
+        <!-- botón tipo hamburguesa para disp. móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!-- ícono para representar el botón  hamburguesa-->
+        </button>
+        <!-- barra de navegación- contenido debe colapsar para disp. de pantalla mas pequeños-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto"> <!-- navbar-nav, para aplicar estilos a una lista no ordenada (<ul> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#destinos">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#traslados">Traslados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+             </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+<!-- Carrusel de Fotos -->
+<!-- Uso mx-auto para centrarlo horizontalmente -->
+<!-- w-50: dejo ancho del carrusel al 50% del ancho del contenedor padre.-->
+<!-- atributo data-bs-ride se usa para activar automáticamente el carrusel al abrir la pagina -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<!-- <div class="carousel-inner">:contenedor específico diseñado para contener todas las slides dentro del carrusel. -->  
+    <div class="carousel-inner">
+    <!-- active  se muestra inicialmente al cargar la página-->
+        <div class="carousel-item active">
+            <img src="img/isla-san-andres-Colombia.jpg" class="d-block w-100" alt="Playa 1">
+        </div>
+        <div class="carousel-item">
+        <img src="img/arton207.jpg" class="d-block w-100" alt="Playa 2">
+        </div>
+        <div class="carousel-item">
+        <img src="img/playa_punta_de_ rieles_mejillones_CHILE.jpg" class="d-block w-100" alt="Playa 3">
+        </div>
+    </div>
+
+   <!-- data-bs-target, para especificar el destino del control-->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"> <!-- desplazamiento diapositiva previa-->
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span> 
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"><!-- desplazamiento diapositiva sgte-->
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+
+</div>
+
+<!-- tarjetas de destinos -->
+<!-- uso diferentes bordes para cada tarjeta, y uso shadow para sombra en cada card -->
+<div class="container mt-4">
+    <section id="destinos">
+      <h2 class="text-center mb-4">Descubre Nuestros Destinos</h2>
+      <div class="row">
+        <!-- Tarjeta1 -->
+        <div class="col-md-3 mb-2">
+          <div class="card rounded border-primary border-3 shadow">
+            <img src="img/isla-san-andres-Colombia.jpg" class="card-img-top img-fluid" alt="playa1">
+            <div class="card-body">
+              <h5 class="card-title small">Isla San Andrés - Colombia</h5>
+              <p class="card-text small">
+                La isla de San Andrés, una joya colombiana, ofrece un clima agradable durante todo el año para disfrutar de sus magníficas playas. Con más de 40 opciones, Spratt Bight destaca como la más hermosa, con sus extensas arenas blancas y aguas cristalinas.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Tarjeta2 -->
+        <div class="col-md-3 mb-2">
+          <div class="card rounded border-success border-3 shadow">
+            <img src="img/Ixtapa_zihuatanejo_mexico.jpg" class="card-img-top" alt="Playa2">
+            <div class="card-body">
+              <h5 class="card-title small">Playas de Zihuatanejo - México</h5>
+              <p class="card-text small">
+                Zihuatanejo es un destacado destino turístico en México, gracias a su variedad de playas, ubicación estratégica, oferta gastronómica y su proximidad a Ixtapa. La combinación de modernidad y lujo en Ixtapa, junto con el encanto tradicional y pesquero de Zihuatanejo.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Tarjeta3 -->
+        <div class="col-md-3 mb-2">
+          <div class="card rounded border-danger border-3 shadow">
+            <img src="img/playa_punta_de_ rieles_mejillones_CHILE.jpg" class="card-img-top" alt="playa3">
+            <div class="card-body">
+              <h5 class="card-title small">Playa de Punta de Rieles - Chile</h5>
+              <p class="card-text small">
+                Punta de Rieles, destacada entre las playas más hermosas de la región de Antofagasta en Chile, ofrece un escenario perfecto para la relajación vacacional con sus aguas turquesa y tranquilas, así como su suave arena blanca. Reconocida como uno de los destinos ideales para disfrutar de un verano placentero.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Tarjeta4 -->
+        <div class="col-md-3 mb-2">
+          <div class="card rounded border-secondary border-3 shadow ">
+            <img src="img/arton207.jpg" class="card-img-top" alt="Imagen 4">
+            <div class="card-body">
+              <h5 class="card-title small">Playa Arena Blanca - Brasil</h5>
+              <p class="card-text small">
+                Arena Blanca en el estado de Santa Catarina en Brasil es una joya costera con extensas playas de arena fina y aguas cristalinas del Atlántico. Su paisaje paradisíaco, ideal para relajarse y explorar la naturaleza, la convierte en un destino inolvidable, cautivando con su encanto tropical.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <div class="container">
+    <section id="traslados">
+      <h2 class="text-center mb-4">Elige cómo viajar a tu destino</h2>
+      <div class="row">
+        <div class="col-6 border">
+          <div class="row">
+            <div class="col-6 border p-4">
+              <div class="box">
+                <img src="img/bus.jpg" class="img-fluid" alt="Transporte en bus">
+              </div>
+            </div>
+            <div class="col-6 border p-4">
+              <div class="box">
+                <img src="img/helicoptero.jpg" class="img-fluid" alt="Viaje en helicóptero">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 border p-4">
+              <div class="box">
+                <img src="img/lancha.jpg" class="img-fluid" alt="Viaje en lancha">
+              </div>
+            </div>
+            <div class="col-6 border p-4">
+              <div class="box">
+                <img src="img/jeep_playa.jpg" class="img-fluid" alt="Viaje en jeep">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 border p-4 text-center">
+          <img src="img/crucero.jpg" class="img-fluid" alt="Viaje en crucero">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="about" class="mt-2">
+    <h2 class="text-center mb-4">Acerca de Nosotros</h2>
+    <div class="container">
+     <h5 class="text-center mb-4">Somos una agencia de viajes especializada en destinos de playas paradisíacas</h5>
+        <p>¿Buscas el escape perfecto a un destino de ensueño? Sumérgete en la belleza de nuestras playas paradisíacas, donde las aguas cristalinas y las arenas doradas te esperan para ofrecerte unas vacaciones inolvidables.</p>
+        <p>En nuestro rincón del paraíso, experimentarás la serenidad de las olas acariciando la costa, el sol brindando su cálido abrazo y la brisa marina llevándote a un estado de relajación total. Nuestros destinos de playa son el refugio perfecto para aquellos que buscan escapar de la rutina y sumergirse en la belleza natural.</p>
+      </div>
+  </section>
+
+
+<!-- Formulario de contacto -->
+<section id="contact" class="mt-4">
+    <div class="container">
+      <div class="card p-4" style="background-color: #94ebf1;">
+        <!--  estilo de fondo en style -->
+        <h2 class="text-center mb-4">Contacto</h2>
+        <form action="#" method="post" id="contactForm">
+          <div class="row">
+            <!-- Formulario ocupando 6 columnas en disp. medianos y grandes -->
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+              </div>
+  
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+           
+            <!-- Texto ocupa 6 columnas en disp medianos y grandes -->
+            <div class="col-md-6">
+              <p>
+                Descubre el paraíso en nuestras playas! ¿Listo para vivir la experiencia definitiva? Desde arenas doradas hasta aguas cristalinas, nuestras playas ofrecen un escape único. ¡Contáctanos y planifiquemos juntos unas vacaciones inolvidables! La brisa marina y la tranquilidad te esperan. ¡Convierte tus sueños de playa en realidad!
+              </p>
+            </div>
+            <!-- Fin del texto ocupando 6 columnas -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
